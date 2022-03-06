@@ -1,0 +1,73 @@
+.App {
+  background-color: white;
+  font-family: var(--bs-font-sans-serif);
+  color: #212529;
+  margin: 10px;
+}
+
+.container1 {
+  background-color: whitesmoke;
+  border: 3px solid blue;
+  border-radius: 20px;
+  padding: 20px 20px 0 20px;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+#butC {
+  width: 100px;
+  padding: 3px;
+}
+
+#butC {
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  border: 3px solid blue;
+  border-radius: 5px;
+  margin: 5px;
+  position: relative;
+  top: -5px;
+}
+
+.column {
+  float: center;
+  width: 25%;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.column1 {
+  width: 25%;
+  padding: 20px 15px;
+}
+
+.column2 {
+  float: center;
+  width: 20%;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#city {
+  font-size: 30px;
+}
+
+#sec {
+  padding: 0 15px;
+}
+
+#temp1 {
+  font-size: 45px;
+}
+
+#propert {
+  font-size: 15px;
+  padding: 35px 0;
+}
