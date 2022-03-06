@@ -30,6 +30,18 @@
   top: -5px;
 }
 
+.column {
+  float: center;
+  width: 25%;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.column1 {
+  width: 25%;
+  padding: 20px 15px;
+}
+
 .column2 {
   float: center;
   width: 20%;
