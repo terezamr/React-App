@@ -61,7 +61,7 @@ function App() {
             </Col>
             <Col>
               <Button variant="primary" type="submit">
-                Submit2
+                Submit
               </Button>
             </Col>
           </Form>
