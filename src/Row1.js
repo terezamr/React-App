@@ -2,23 +2,20 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import axios from "axios";
 
 export default function Row1(props) {
   return (
     <Container>
-      <Row className="row">
-        <Col className="column1">
+      <Row>
+        <Col>
           <b id="city">{props.city}</b>
           <p>Saturday</p>
         </Col>
-        <Col className="column1" id="temp1">
-          {props.finalTemp}ºC
+        <Col id="temp1">{props.finalTemp}ºC</Col>
+        <Col id="propert">
+          Humidity: {props.finalHum}%<p>Precipitation: %</p>
         </Col>
-        <Col className="column" id="propert">
-          Humidity: {props.finalHum}%<p>Precipitation: 5%</p>
-        </Col>
-        <Col className="column" id="propert">
+        <Col id="propert">
           Wind: {props.finalWind}km/h
           <p>Realfeel: {props.finalFeels}ºC</p>
         </Col>
