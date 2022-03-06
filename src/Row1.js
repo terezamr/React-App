@@ -6,16 +6,18 @@ import Col from "react-bootstrap/Col";
 export default function Row1(props) {
   return (
     <Container>
-      <Row>
-        <Col>
+      <Row className="row">
+        <Col className="column1">
           <b id="city">{props.city}</b>
           <p>Saturday</p>
         </Col>
-        <Col id="temp1">{props.finalTemp}ºC</Col>
-        <Col id="propert">
+        <Col className="column1" id="temp1">
+          {props.finalTemp}ºC
+        </Col>
+        <Col className="column" id="propert">
           Humidity: {props.finalHum}%<p>Precipitation: %</p>
         </Col>
-        <Col id="propert">
+        <Col className="column" id="propert">
           Wind: {props.finalWind}km/h
           <p>Realfeel: {props.finalFeels}ºC</p>
         </Col>
