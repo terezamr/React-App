@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import Col from "react-bootstrap/col";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import Form from "./Form";
 import Row1 from "./Row1";
 import Row2 from "./Row2";
 import axios from "axios";
 import "./Box.css";
-import reportWebVitals from "./reportWebVitals";
 
 function App() {
   let [city, setCity] = useState("");
@@ -47,24 +44,7 @@ function App() {
     <div>
       <div className="App">
         <div className="container1">
-          <Form onSubmit={handleSubmit}>
-            <Col>
-              <input
-                autoFocus="off"
-                autoComplete="off"
-                type="text"
-                class="form-control"
-                id="inputCity"
-                placeholder="Type the place..."
-                onChange={updateCity}
-              />
-            </Col>
-            <Col>
-              <Button variant="primary" type="submit">
-                Submit
-              </Button>
-            </Col>
-          </Form>
+          <Form onSubmit={handleSubmit} />
           <Row1
             city={cityName}
             finalTemp={temp}
@@ -72,7 +52,7 @@ function App() {
             finalDesc={desc}
             finalHum={hum}
             finalWind={wind}
-            finalfeels={feels}
+            finalFeels={feels}
           />
           <Row2 />
         </div>
@@ -83,8 +63,3 @@ function App() {
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
