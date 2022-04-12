@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import Form from "./Form";
 import Row1 from "./Row1";
 import Row2 from "./Row2";
 import axios from "axios";
