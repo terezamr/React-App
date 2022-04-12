@@ -13,11 +13,12 @@ export default function Row1(props) {
         </div>
         <div class="column three"></div>
         <div className="column" id="propert">
-          Humidity: {props.finalHum}%<p>Precipitation: {props.finalPrec}%</p>
+          Humidity: {props.finalHum}%<p>Wind: {props.finalWind} m/h</p>
+          <p>Realfeel: {props.finalFeel} ºC</p>
         </div>
         <div className="column" id="propert">
-          Wind: {props.finalWind}km/h
-          <p>Realfeel: {props.finalFeels}ºC</p>
+          Min temp: {props.finalMinTemp} ºC
+          <p>Max temp: {props.finalMaxTemp} ºC</p>
         </div>
       </div>
     </div>
