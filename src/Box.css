@@ -54,33 +54,16 @@
   padding: 15px;
 }
 
-.two {
-  width: 30%;
-  padding: 15px 100px 15px 5px;
-  margin: 0 auto;
-}
-
-.three {
-  width: 5%;
-}
-
-.four {
-  width: 20%;
-}
-
-.four {
-  width: 20%;
-}
-
-.column1 {
-  display: block;
-  margin: 0 auto;
-}
-
-.week {
-  width: 20%;
+.container.weekly {
+  padding: 0 12px 12px 12px;
   margin: 0 auto;
   text-align: center;
+  font-size: 15px;
+}
+
+.container.daily {
+  text-align: left;
+  vertical-align: middle;
 }
 
 p {
@@ -93,6 +76,10 @@ p {
   clear: both;
 }
 
+#name {
+  padding: 20px 0;
+}
+
 #city {
   font-size: 30px;
 }
@@ -103,6 +90,7 @@ p {
 
 #temp1 {
   font-size: 45px;
+  padding: 20px 0;
 }
 
 #propert {

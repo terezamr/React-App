@@ -140,13 +140,14 @@ function App() {
               date={showDate}
             />
           </div>
-          
-          <div className="row">
-            <DailyTemp day={list[1]} tempmax="20" tempmin="15" />
-            <DailyTemp day={list[2]} tempmax="19" tempmin="17" />
-            <DailyTemp day={list[3]} tempmax="21" tempmin="16" />
-            <DailyTemp day={list[4]} tempmax="21" tempmin="16" />
-            <DailyTemp day={list[5]} tempmax="18" tempmin="14" />
+          <div class="container weekly">
+            <div className="row">
+              <DailyTemp day={list[1]} tempmax="20" tempmin="15" />
+              <DailyTemp day={list[2]} tempmax="19" tempmin="17" />
+              <DailyTemp day={list[3]} tempmax="21" tempmin="16" />
+              <DailyTemp day={list[4]} tempmax="21" tempmin="16" />
+              <DailyTemp day={list[5]} tempmax="18" tempmin="14" />
+            </div>
           </div>
         </div>
       </div>
