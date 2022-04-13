@@ -13,7 +13,7 @@ export default function Row1(props) {
             {props.finalTemp}ºC
           </div>
           <div className="col-1 " id="temp1">
-            <img src={props.finalIcon} width="50" id="mainicon"/>
+            <img src={props.finalIcon} width="50" id="mainicon" alt="img"/>
           </div>
           <div className="col-2 " id="propert">
             Humidity: {props.finalHum}%<p>Wind: {props.finalWind} m/h</p>
