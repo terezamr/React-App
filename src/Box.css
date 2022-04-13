@@ -83,6 +83,10 @@
   text-align: center;
 }
 
+p {
+  margin: 0;
+}
+
 .row:after {
   content: "";
   display: table;
@@ -105,4 +109,9 @@
   margin: 0 auto;
   font-size: 12px;
   padding: 35px 0;
+}
+
+.tempicon {
+  width: 50px;
+  margin: 0 15px 0 0;
 }
