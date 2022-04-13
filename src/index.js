@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import DailyTemp from "./DailyTemp";
 import Row1 from "./Row1";
+import "bootstrap/dist/css/bootstrap.css";
+
 import "./Box.css";
 
 function App() {
