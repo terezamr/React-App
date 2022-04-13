@@ -57,7 +57,7 @@ function App() {
   let [temp, setTemp] = useState("18");
   let [wind, setWind] = useState("");
   let [hum, setHum] = useState("");
-  let [desc, setDesc] = useState("");
+ // let [desc, setDesc] = useState("");
   let [minTemp, setminTemp] = useState("");
   let [maxTemp, setmaxTemp] = useState("");
   let [feels, setFeels] = useState("");
@@ -71,7 +71,7 @@ function App() {
     setWind(Math.round(response.data.wind.speed));
     setHum(Math.round(response.data.main.humidity));
 
-    setDesc(response.data.weather[0].description);
+  //  setDesc(response.data.weather[0].description);
     setminTemp(Math.round(response.data.main.temp_min));
     setmaxTemp(Math.round(response.data.main.temp_max));
     setFeels(Math.round(response.data.main.feels_like));
@@ -138,6 +138,7 @@ function App() {
               finalMinTemp={minTemp}
               finalMaxTemp={maxTemp}
               date={showDate}
+              finalIcon={icon}
             />
           </div>
           <div class="container weekly">

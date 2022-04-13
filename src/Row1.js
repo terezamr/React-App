@@ -5,14 +5,16 @@ export default function Row1(props) {
     <div>
       <div class="container daily">
         <div class="row">
-          <div className="col-4" id="name">
+          <div className="col-3" id="name">
             <b id="city">{props.finalCity}</b>
             <p>Saturday</p>
           </div>
-          <div className="col " id="temp1">
+          <div className="col-3 " id="temp1">
             {props.finalTemp}ºC
           </div>
-          <div class="col-1"></div>
+          <div className="col-1 " id="temp1">
+            <img src={props.finalIcon} width="50" id="mainicon"/>
+          </div>
           <div className="col-2 " id="propert">
             Humidity: {props.finalHum}%<p>Wind: {props.finalWind} m/h</p>
             <p>Realfeel: {props.finalFeel} ºC</p>
