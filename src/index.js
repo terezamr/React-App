@@ -36,20 +36,29 @@ function App() {
   let [offset, setoffset] = useState("");
   let dayw1 = list[0];
   let hour = newDate.getHours();
+  
+  console.log(hour);
+  
+  console.log(offset);
   let min = newDate.getMinutes();
   let difference = offset - 1;
   hour = hour + difference;
-
+  console.log(hour);
   if (min < 10) {
     min = `0${min}`;
   }
-  if (hour < 10) {
+  if (hour < 0) {
+    hour = 24 + hour;
+    dayw1 = list[6];
+  }
+  if (hour > 0 && hour < 10) {
     hour = `0${hour}`;
   }
   if (hour > 23) {
     hour = `0${hour - 24}`;
     dayw1 = list[1];
   }
+  
 
   let showDate = `${dayw1} ${hour}:${min}`;
   const [ready, setReady] = useState(false);
@@ -81,6 +90,7 @@ function App() {
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
     setReady(true);
+    console.log(response);
   }
 
   function handleSubmit(event) {
@@ -157,10 +167,14 @@ function App() {
     );
   } else {
     let apiKey = "c1eb44225008106eb8fc583ee3b61e06";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Lisbon&appid=${apiKey}&units=metric`;    
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Lisbon&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
-    return "Loading...";
+    return (
+      <div className="App">
+        <div className="container1">Loading...</div>
+      </div>
+    );
   }
 }
 
