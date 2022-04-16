@@ -36,9 +36,9 @@ function App() {
   let [offset, setoffset] = useState("");
   let dayw1 = list[0];
   let hour = newDate.getHours();
-  
+
   console.log(hour);
-  
+
   console.log(offset);
   let min = newDate.getMinutes();
   let difference = offset - 1;
@@ -58,7 +58,6 @@ function App() {
     hour = `0${hour - 24}`;
     dayw1 = list[1];
   }
-  
 
   let showDate = `${dayw1} ${hour}:${min}`;
   const [ready, setReady] = useState(false);
@@ -168,11 +167,9 @@ function App() {
           </div>
         </div>
         <footer>
-          Project coded by{" "}
-                 Tereza Melo Ribeiro
-                    and is{" "}
+          Project coded by Tereza Melo Ribeiro and is{" "}
           <a
-            href="https://github.com/wecodeschool/react-weather-app"
+            href="https://github.com/terezamr/React-App"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -180,7 +177,7 @@ function App() {
           </a>{" "}
           and{" "}
           <a
-            href="https://suspicious-beaver-111c4d.netlify.com/"
+            href="https://velvety-starburst-afe01c.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
