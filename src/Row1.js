@@ -1,25 +1,29 @@
 import React from "react";
+import WeatherIcon from "./WeatherIcon";
 
 export default function Row1(props) {
   return (
     <div>
       <div class="container daily">
         <div class="row">
-          <div className="col-2" id="name">
+          <div className="col-3" id="name">
             <b id="city">{props.finalCity}</b>
             <p id="date">{props.date}</p>
           </div>
-          
-             <div className="col-2">
-            <img src={props.finalIcon} width="50" id="mainicon" alt="img" />
-            </div>
-            <div className="col-2">
+
+          <div className="col-2" id="secondcol">
+            <WeatherIcon
+              code={props.finalIcon}
+              id="mainicon"
+              alt="img"
+              size="50"
+            />
+          </div>
+          <div className="col-2" id="thirdcol">
             <span id="temperature">{props.finalTemp}</span>
             <span id="units">ºC</span>
-          
           </div>
           <div className="col-2 " id="propert">
-            
             Humidity: {props.finalHum}%<p>Wind: {props.finalWind} m/h</p>
             <p>Realfeel: {props.finalFeel} ºC</p>
           </div>

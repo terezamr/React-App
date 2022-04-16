@@ -62,7 +62,8 @@ function App() {
 
   let showDate = `${dayw1} ${hour}:${min}`;
   const [ready, setReady] = useState(false);
-  let [city, setCity] = useState("");
+  const [city, setCity] = useState("Lisbon");
+  const [finalcity, setFinalCity] = useState("");
   let [temp, setTemp] = useState("");
   let [wind, setWind] = useState("");
   let [hum, setHum] = useState("");
@@ -76,7 +77,9 @@ function App() {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
   function handleResponse(response) {
+    setReady(true);
     setCity(response.data.name);
+    setFinalCity(city);
     setTemp(Math.round(response.data.main.temp));
     setWind(Math.round(response.data.wind.speed));
     setHum(Math.round(response.data.main.humidity));
@@ -86,11 +89,7 @@ function App() {
     setmaxTemp(Math.round(response.data.main.temp_max));
     setFeels(Math.round(response.data.main.feels_like));
     setoffset(response.data.timezone / 3600);
-    setIcon(
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-    );
-    setReady(true);
-    console.log(response);
+    setIcon(response.data.weather[0].icon);
   }
 
   function handleSubmit(event) {
@@ -99,8 +98,13 @@ function App() {
   }
 
   function updateCity(event) {
-    event.preventDefault();
     setCity(event.target.value);
+  }
+
+  function search() {
+    let apiKey = "c1eb44225008106eb8fc583ee3b61e06";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Lisbon&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
   }
 
   if (ready) {
@@ -141,7 +145,7 @@ function App() {
             </form>
             <div className="row">
               <Row1
-                finalCity={city}
+                finalCity={finalcity}
                 finalTemp={temp}
                 finalHum={hum}
                 finalWind={wind}
@@ -166,15 +170,8 @@ function App() {
       </div>
     );
   } else {
-    let apiKey = "c1eb44225008106eb8fc583ee3b61e06";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Lisbon&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-
-    return (
-      <div className="App">
-        <div className="container1">Loading...</div>
-      </div>
-    );
+    search();
+    return "Loading...";
   }
 }
 

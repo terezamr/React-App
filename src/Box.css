@@ -6,12 +6,12 @@
 }
 
 .container1 {
-  background-color: lightblue;
-  border: 3px solid blue;
-  border-radius: 10px;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  border-radius: 5px;
   padding: 20px;
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 650px;
 }
 
 .search {
@@ -99,17 +99,25 @@ p {
   margin-right: 0px;
 }
 
+#secondcol {
+  width: 60px;
+  position: relative;
+  top: 30px;
+}
+
+#thirdcol {
+  position: relative;
+  top: 20px;
+}
+
 #mainicon {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 60px;
   float: right;
 }
 
-.col-2 {
-    padding: 20px 0;
-}
+
 
 #temperature {
   font-weight: bold;
