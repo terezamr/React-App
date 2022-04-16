@@ -1,5 +1,6 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
+import GetTemp from "./GetTemp";
 
 export default function Row1(props) {
   return (
@@ -20,8 +21,8 @@ export default function Row1(props) {
             />
           </div>
           <div className="col-2" id="thirdcol">
-            <span id="temperature">{props.finalTemp}</span>
-            <span id="units">ºC</span>
+            <GetTemp celsius={props.finalTemp} id="temperature" />
+            
           </div>
           <div className="col-2 " id="propert">
             Humidity: {props.finalHum}%<p>Wind: {props.finalWind} m/h</p>

@@ -5,11 +5,17 @@
   margin: 10px;
 }
 
-.container1 {
+.container1  {
   background-color: whitesmoke;
   border: 1px solid black;
   border-radius: 5px;
   padding: 20px;
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+footer {
+  font-size: 13px;
   margin: 0 auto;
   max-width: 650px;
 }
@@ -108,6 +114,7 @@ p {
 #thirdcol {
   position: relative;
   top: 20px;
+  width: 100px;
 }
 
 #mainicon {
@@ -122,14 +129,14 @@ p {
 #temperature {
   font-weight: bold;
   color: rgb(33, 33, 33);
-  font-size: 64px;
+  font-size: 60px;
   line-height: 64px;
   font-weight: 400;
 }
 
 #units {
   color: rgb(33, 33, 33);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   position: relative;
   line-height: 1;
