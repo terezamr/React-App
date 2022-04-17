@@ -36,14 +36,9 @@ function App() {
   let [offset, setoffset] = useState("");
   let dayw1 = list[0];
   let hour = newDate.getHours();
-
-  console.log(hour);
-
-  console.log(offset);
   let min = newDate.getMinutes();
   let difference = offset - 1;
   hour = hour + difference;
-  console.log(hour);
   if (min < 10) {
     min = `0${min}`;
   }
@@ -66,11 +61,13 @@ function App() {
   let [temp, setTemp] = useState("");
   let [wind, setWind] = useState("");
   let [hum, setHum] = useState("");
-  // let [desc, setDesc] = useState("");
+  let [des, setDes] = useState("");
   let [minTemp, setminTemp] = useState("");
   let [maxTemp, setmaxTemp] = useState("");
   let [feels, setFeels] = useState("");
   let [icon, setIcon] = useState("");
+  let [lat, setLat] = useState("");
+  let [lon, setLon] = useState("");
 
   let apiKey = "c1eb44225008106eb8fc583ee3b61e06";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -82,13 +79,20 @@ function App() {
     setTemp(Math.round(response.data.main.temp));
     setWind(Math.round(response.data.wind.speed));
     setHum(Math.round(response.data.main.humidity));
-
-    //  setDesc(response.data.weather[0].description);
+    setDes(response.data.weather[0].description);
     setminTemp(Math.round(response.data.main.temp_min));
     setmaxTemp(Math.round(response.data.main.temp_max));
     setFeels(Math.round(response.data.main.feels_like));
     setoffset(response.data.timezone / 3600);
     setIcon(response.data.weather[0].icon);
+    setLat(response.data.coord.lat);
+    setLon(response.data.coord.lon);
+    
+    
+  }
+
+  function forecastApp(response) {
+    console.log(response);
   }
 
   function handleSubmit(event) {
@@ -103,6 +107,7 @@ function App() {
   function search() {
     let apiKey = "c1eb44225008106eb8fc583ee3b61e06";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Lisbon&appid=${apiKey}&units=metric`;
+
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -153,17 +158,10 @@ function App() {
                 finalMaxTemp={maxTemp}
                 date={showDate}
                 finalIcon={icon}
+                finalDes={des}
               />
             </div>
-            <div class="container weekly">
-              <div className="row">
-                <DailyTemp day={list[1]} tempmax="20" tempmin="15" />
-                <DailyTemp day={list[2]} tempmax="19" tempmin="17" />
-                <DailyTemp day={list[3]} tempmax="21" tempmin="16" />
-                <DailyTemp day={list[4]} tempmax="21" tempmin="16" />
-                <DailyTemp day={list[5]} tempmax="18" tempmin="14" />
-              </div>
-            </div>
+            
           </div>
         </div>
         <footer>

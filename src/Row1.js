@@ -9,7 +9,8 @@ export default function Row1(props) {
         <div class="row">
           <div className="col-3" id="name">
             <b id="city">{props.finalCity}</b>
-            <p id="date">{props.date}</p>
+            <p id="maininfo">{props.date}</p>
+            <p id="maininfo">{props.finalDes}</p>
           </div>
 
           <div className="col-2" id="secondcol">
@@ -17,12 +18,12 @@ export default function Row1(props) {
               code={props.finalIcon}
               id="mainicon"
               alt="img"
-              size="50"
+              size="52"
+              animation="true"
             />
           </div>
           <div className="col-2" id="thirdcol">
             <GetTemp celsius={props.finalTemp} id="temperature" />
-            
           </div>
           <div className="col-2 " id="propert">
             Humidity: {props.finalHum}%<p>Wind: {props.finalWind} m/h</p>

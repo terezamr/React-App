@@ -16,20 +16,20 @@ export default function GetTemp(props) {
       <div>
         <span id={props.id}> {props.celsius}</span>
         <span id="units">
-          ºC
-          <a href="/" onClick={convertFar}>
+          ºC |{" "}
+          <a href="/" onClick={convertFar} id="unclickedtemp">
             ºF
           </a>
         </span>
       </div>
     );
   } else {
-    let far = Math.round(((props.celsius * (9/5))+32));
+    let far = Math.round(props.celsius * (9 / 5) + 32);
     return (
       <div>
         <span id={props.id}> {far}</span>
         <span id="units">
-          <a href="/" onClick={convertCel}>
+          <a href="/" onClick={convertCel} id="unclickedtemp">
             ºC
           </a>
           ºF
