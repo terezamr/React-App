@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import DailyTemp from "./DailyTemp";
+//import DailyTemp from "./DailyTemp";
 import Row1 from "./Row1";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -66,8 +66,8 @@ function App() {
   let [maxTemp, setmaxTemp] = useState("");
   let [feels, setFeels] = useState("");
   let [icon, setIcon] = useState("");
-  let [lat, setLat] = useState("");
-  let [lon, setLon] = useState("");
+//  let [lat, setLat] = useState("");
+ // let [lon, setLon] = useState("");
 
   let apiKey = "c1eb44225008106eb8fc583ee3b61e06";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -85,15 +85,15 @@ function App() {
     setFeels(Math.round(response.data.main.feels_like));
     setoffset(response.data.timezone / 3600);
     setIcon(response.data.weather[0].icon);
-    setLat(response.data.coord.lat);
-    setLon(response.data.coord.lon);
+  //  setLat(response.data.coord.lat);
+   // setLon(response.data.coord.lon);
     
     
   }
 
-  function forecastApp(response) {
-    console.log(response);
-  }
+ // function forecastApp(response) {
+  //  console.log(response);
+ // }
 
   function handleSubmit(event) {
     event.preventDefault();
