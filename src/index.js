@@ -136,9 +136,7 @@ function App() {
                 </button>
               </div>
 
-              <div className="colum butLoc">
-                <button id="butC"> Current Location</button>
-              </div>
+              
             </form>
             <div className="row">
               <Row1
